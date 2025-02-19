@@ -1,0 +1,38 @@
+{
+  "name": "jacks-test",
+  "version": "0.1.0",
+  "description": "Internal package for Gadget app jacks-test (Development environment)",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production vite build",
+    "dev": "ggt dev ./jacks-test --app=jacks-test --env=development"
+  },
+  "resolutions": {
+    "@types/react": "^18.0.28"
+  },
+  "dependencies": {
+    "@bigcommerce/big-design": "^1.1.0",
+    "@bigcommerce/big-design-icons": "^1.0.1",
+    "@bigcommerce/big-design-theme": "^1.0.1",
+    "@gadget-client/jacks-test": "link:.gadget/client",
+    "@gadgetinc/react": "^0.18.5",
+    "@gadgetinc/react-bigcommerce": "^0.1.5",
+    "gadget-server": "link:.gadget/server",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^7.0.2",
+    "styled-components": "^5.3.11",
+    "@space48/bigcommerce-api": "^0.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.7",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.34",
+    "@vitejs/plugin-react-swc": "3.2.0",
+    "typescript": "^5.7.2",
+    "vite": "^5.3.5"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
