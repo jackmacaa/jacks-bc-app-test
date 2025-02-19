@@ -1,5 +1,4 @@
 import { ActionOptions } from "gadget-server";
-import path from "path";
 
 export const run: ActionRun = async ({ params, api, connections, trigger }) => {
   console.warn(
@@ -15,8 +14,6 @@ export const run: ActionRun = async ({ params, api, connections, trigger }) => {
     );
     // throw new Error("This action can only be triggered by Scheduler");
   }
-  // console.log({ params });
-  // console.log({ api });
 
   try {
     // get the BigCommerce API client for the current store
@@ -38,7 +35,7 @@ export const run: ActionRun = async ({ params, api, connections, trigger }) => {
       throw new Error("Product Not Found");
     }
 
-    console.log(`${JSON.stringify(product)}`);
+    console.log(JSON.stringify(product));
 
     if (product?.sale_price < product.price) {
       const productCategories = product.categories.map((item) => item);
